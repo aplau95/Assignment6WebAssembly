@@ -5,8 +5,8 @@
   
   (func $deref (param i32 i32) (result i32)
     get_local 0
-    get_local 1
-    i32.add
+  	get_local 1
+  	i32.add
     i32.load8_u)
   
   (func $interpr (param i32 i32) (result i32)
@@ -126,4 +126,12 @@
     i32.const 0
     get_local 0
     call $interpr)
+  
+  (func $checkEquals (param i32 i32) (result i32)
+    get_local 0
+    get_local 1
+    i32.eq 
+  )
+  
+  (export "checkEquals" (func $checkEquals))
   (export "interp" (func $interp)))
