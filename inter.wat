@@ -43,7 +43,7 @@
     i32.const 2
     i32.eq
     if 
-    get_local 0
+      get_local 0
       i32.const 1
       i32.add
       call $deref
